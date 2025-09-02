@@ -11,8 +11,15 @@
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/src/test-setup.[jt]s"
     ],
+    "rust": [
+      "{projectRoot}/src/**/*.rs",
+      "{projectRoot}/Cargo.toml",
+      "{projectRoot}/Cargo.lock"
+    ],
     "sharedGlobals": [
-      "{workspaceRoot}/.github/workflows/main.yml"
+      "{workspaceRoot}/.github/workflows/main.yml",
+      "{workspaceRoot}/pnpm-workspace.yaml",
+      "{workspaceRoot}/tsconfig.base.json"
     ]
   },
   "nxCloudId": "68b64a82685a813e37241d2e",
@@ -29,11 +36,7 @@
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
-      },
-      "exclude": [
-        "libs/*",
-        "libs/shared-types/*"
-      ]
+      }
     },
     {
       "plugin": "@nx/react/router-plugin",
@@ -65,24 +68,22 @@
       "options": {
         "targetName": "e2e"
       }
-    },
-    {
-      "plugin": "@nx/js/typescript",
-      "include": [
-        "libs/*",
-        "libs/shared-types/*"
-      ],
-      "options": {
-        "typecheck": {
-          "targetName": "typecheck"
-        }
-      }
     }
   ],
   "targetDefaults": {
     "test": {
       "dependsOn": [
         "^build"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "dev": {
+      "dependsOn": [
+        "^build-napi"
       ]
     }
   },

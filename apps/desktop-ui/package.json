@@ -27,20 +27,23 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
     "@electron-toolkit/utils": "^4.0.0",
-    "electron-updater": "^6.3.9"
+    "@react-router/node": "^7.2.0",
+    "@react-router/serve": "^7.2.0",
+    "electron-updater": "^6.3.9",
+    "isbot": "^4.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.2.0",
+    "@cocteau-twins-pc/shared-types": "workspace:*"
   },
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^1.0.1",
-    "@types/node": "^22.16.5",
+    "@react-router/dev": "^7.2.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.7.0",
     "electron": "^37.2.3",
     "electron-builder": "^25.1.8",
-    "electron-vite": "^4.0.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.5"
+    "electron-vite": "^4.0.0"
   }
 }

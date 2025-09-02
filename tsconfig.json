@@ -4,10 +4,10 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/cocteau-twins-pc-e2e"
+      "path": "./apps/desktop-ui"
     },
     {
-      "path": "./apps/cocteau-twins-pc"
+      "path": "./libs/shared-types"
     }
   ]
 }

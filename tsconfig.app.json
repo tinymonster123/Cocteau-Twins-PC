@@ -1,13 +1,10 @@
 {
-  "extends": "../../tsconfig.app.json",
-  "include": ["electron.vite.config.*", "src/main/**/*", "src/preload/**/*"],
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "composite": false,
     "declaration": false,
     "declarationMap": false,
     "emitDeclarationOnly": false,
-    "types": ["node", "electron-vite/node"],
-    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   }

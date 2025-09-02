@@ -4,8 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [lib]
-crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib"]
 
 [dependencies]
 napi = { version = "2.10.2", features = ["derive"] }
 napi-derive = "2.10.0"
+
+[build-dependencies]
+napi-build = "2.0.1"

@@ -1,0 +1,30 @@
+{
+  "name": "rust-core",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/rust-core/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cargo build --release",
+        "cwd": "libs/rust-core"
+      }
+    },
+    "build-napi": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "napi build --platform --release",
+        "cwd": "libs/rust-core"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cargo test",
+        "cwd": "libs/rust-core"
+      }
+    }
+  },
+  "tags": ["type:lib", "lang:rust"]
+}

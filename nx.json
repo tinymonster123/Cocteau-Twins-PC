@@ -12,7 +12,7 @@
       "!{projectRoot}/src/test-setup.[jt]s"
     ],
     "sharedGlobals": [
-      "{workspaceRoot}/.github/workflows/ci.yml"
+      "{workspaceRoot}/.github/workflows/main.yml"
     ]
   },
   "nxCloudId": "68b64a82685a813e37241d2e",
@@ -29,7 +29,11 @@
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
-      }
+      },
+      "exclude": [
+        "libs/*",
+        "libs/shared-types/*"
+      ]
     },
     {
       "plugin": "@nx/react/router-plugin",
@@ -60,6 +64,18 @@
       "plugin": "@nx/playwright/plugin",
       "options": {
         "targetName": "e2e"
+      }
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": [
+        "libs/*",
+        "libs/shared-types/*"
+      ],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
       }
     }
   ],

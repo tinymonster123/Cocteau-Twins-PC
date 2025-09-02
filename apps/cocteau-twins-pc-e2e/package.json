@@ -1,0 +1,10 @@
+{
+  "name": "@cocteau-twins-pc/cocteau-twins-pc-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@cocteau-twins-pc/cocteau-twins-pc"
+    ]
+  }
+}

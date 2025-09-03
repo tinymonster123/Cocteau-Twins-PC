@@ -1,3 +1,3 @@
 export interface RustCoreAPI {
-    getSystemInfo: () => string;
+  getSystemInfo: () => string
 }

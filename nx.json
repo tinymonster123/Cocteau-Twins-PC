@@ -1,21 +1,14 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
       "default",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/src/test-setup.[jt]s"
     ],
-    "rust": [
-      "{projectRoot}/src/**/*.rs",
-      "{projectRoot}/Cargo.toml",
-      "{projectRoot}/Cargo.lock"
-    ],
+    "rust": ["{projectRoot}/src/**/*.rs", "{projectRoot}/Cargo.toml", "{projectRoot}/Cargo.lock"],
     "sharedGlobals": [
       "{workspaceRoot}/.github/workflows/main.yml",
       "{workspaceRoot}/pnpm-workspace.yaml",
@@ -72,19 +65,13 @@
   ],
   "targetDefaults": {
     "test": {
-      "dependsOn": [
-        "^build"
-      ]
+      "dependsOn": ["^build"]
     },
     "build": {
-      "dependsOn": [
-        "^build"
-      ]
+      "dependsOn": ["^build"]
     },
     "dev": {
-      "dependsOn": [
-        "^build-napi"
-      ]
+      "dependsOn": ["^build-napi"]
     }
   },
   "generators": {

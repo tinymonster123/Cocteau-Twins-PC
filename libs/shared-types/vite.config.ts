@@ -1,13 +1,10 @@
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/libs/shared-types',
-  plugins: [],
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [ nxViteTsPaths() ],
-  // },
+  plugins: [tailwindcss()],
   test: {
     name: '@cocteau-twins-pc/shared-types',
     watch: false,

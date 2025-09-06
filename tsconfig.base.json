@@ -16,8 +16,8 @@
     "customConditions": ["development"],
     "baseUrl": ".",
     "paths": {
-      "@cocteau-twins-pc/shared-types": ["libs/shared-types/src/index.ts"],
-      "@cocteau-twins-pc/rust-core": ["libs/rust-core/src/lib.rs"]
+      "@cocteau-twins-pc/rust-core": ["libs/rust-core/index.d.ts"],
+      "@cocteau-twins-pc/shared-types": ["libs/shared-types/src/index.ts"]
     }
   }
 }

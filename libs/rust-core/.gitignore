@@ -1,0 +1,11 @@
+# Rust build artifacts
+/target
+
+# N-API build output
+*.node
+index.js
+index.d.ts
+
+# Generated wasm files
+wasi-worker-browser.mjs
+wasi-worker.mjs

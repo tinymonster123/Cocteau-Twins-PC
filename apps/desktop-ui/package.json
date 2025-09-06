@@ -1,5 +1,5 @@
 {
-  "name": "desktop-ui",
+  "name": "@cocteau-twins-pc/desktop-ui",
   "version": "1.0.0",
   "description": "An Electron application with React and TypeScript",
   "main": "./out/main/index.js",
@@ -34,7 +34,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.2.0",
-    "@cocteau-twins-pc/shared-types": "workspace:*"
+    "@cocteau-twins-pc/shared-types": "workspace:*",
+    "@cocteau-twins-pc/rust-core": "workspace:*"
   },
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^1.0.1",

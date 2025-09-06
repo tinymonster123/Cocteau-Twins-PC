@@ -1,14 +1,21 @@
+
 [package]
-name = "rust-core"
+authors = ["LongYinan <lynweklm@gmail.com>"]
+edition = "2021"
+name = "rust_core"
 version = "0.1.0"
-edition = "2024"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = { version = "2.10.2", features = ["derive"] }
-napi-derive = "2.10.0"
+napi = "3.0.0"
+napi-derive = "3.0.0"
+sys-info = "0.9"
 
 [build-dependencies]
-napi-build = "2.0.1"
+napi-build = "2"
+
+[profile.release]
+lto = true
+strip = "symbols"
